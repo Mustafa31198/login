@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+
+
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+
+    <section>
+
+        <div class="container w-50 my-5 shadow-lg">
+            <div class="row text-center ">
+                <div class="inner p-5">
+                    <h1 class="text-info">Smart Login System</h1>
+                    <input oninput="validateForm(this)" id="sName" type="text" class="form-control bg-transparent my-3 "
+                        placeholder="Enter Your name">
+                    <div class="alert alert-warning d-none">
+                        <p class="fs-6"><span class="fs-6 fw-bold">Name:</span>Website name must contain at least 3
+                            char.</p>
+                    </div>
+                    <input oninput="validateForm(this)" id="sEmail" type="email"
+                        class="form-control bg-transparent my-3" placeholder="Enter Your Email">
+                    <div class="alert alert-warning d-none">
+                        <p class="fs-6"><span class="fs-6 fw-bold">Email:</span>Email must look like(example@say.ex).
+                        </p>
+                    </div>
+                    <input oninput="validateForm(this)" id="sPass" type="password"
+                        class="form-control bg-transparent my-3" placeholder="Enter Your Password">
+                    <div class="alert alert-warning d-none">
+                        <p class="fs-6"><span class="fs-6 fw-bold">password:</span>password must be at least 5 char.</p>
+                    </div>
+                    <div id="success"></div>
+                    <button id="signUp" onclick="signup()" class="btn btn-outline-info w-100 my-3">Signup</button>
+                    <p class="d-block m-auto text-white">You have an account?<a id="signIn" href="index.html"
+                            class=" text-white ps-2">Signin</a></p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
