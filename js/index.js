@@ -143,6 +143,7 @@ function logout() {
             text: "See you later",
             icon: "success"
           });
+          localStorage.removeItem('username')
           location.pathname = "/login/index.html";
         }
       });
