@@ -123,11 +123,6 @@ function login() {
 }
 
 function logout() {
-   
-
-
-
-
     Swal.fire({
         title: "Are you sure?",
         text: "You want to Logout",
@@ -141,22 +136,16 @@ function logout() {
           Swal.fire({
             title: "ok",
             text: "See you later",
-            icon: "success"
+            icon: "success",
+            timer: 1500
           });
-          localStorage.removeItem('username')
-          location.pathname = "/login/index.html";
+          setTimeout(function () {
+            localStorage.removeItem('username')
+            location.pathname = "/login/index.html";
+        }, 1500)
+         
         }
       });
-
-
-
-
-
-
-
-
-
-   
 }
 
 
