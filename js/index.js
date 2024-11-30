@@ -9,7 +9,7 @@ var signinPass = document.getElementById('signinPass');
 
 var users = [];
 if (localStorage.getItem('username')&&
-location.pathname =="/home.html") {
+location.pathname =="/login/home.html") {
     document.getElementById('username').innerHTML=`<span class="me-2">Welcome</span>`+localStorage.getItem('username')
 }
 if (localStorage.getItem('user')) {
@@ -44,7 +44,7 @@ function signup() {
         clearForm();
         localStorage.setItem('user', JSON.stringify(users));
         setTimeout(function () {
-            location.pathname = "/index.html"
+            location.pathname = "/login/index.html"
         }, 1500)
     }else{
         Swal.fire("Email is not avilable");
@@ -112,7 +112,7 @@ function login() {
             if (users[i].pass == signinPass.value) {
                 localStorage.setItem('username', users[i].name);
                 login = true;
-                location.pathname = "/home.html";
+                location.pathname ="/login/home.html";
             }
             break;
         }
@@ -143,12 +143,19 @@ function logout() {
             text: "See you later",
             icon: "success"
           });
-          setTimeout(function () {
-            location.pathname = "/index.html";
-        }, 1500)
+          location.pathname = "/login/index.html";
         }
       });
- 
+
+
+
+
+
+
+
+
+
+   
 }
 
 
